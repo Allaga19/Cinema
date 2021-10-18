@@ -13,7 +13,9 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/media.css">
    <script src="js/script.js" defer></script>
 </head>
 
@@ -24,6 +26,13 @@
             <img class="logo" src="img/logo.svg" alt="logo">
          </a>
          <nav class="nav">
+            <button class="m-menu">
+               <svg width="15" height="9" viewBox="0 0 15 9" fill="none">xmlns="http://www.w3.org/2000/svg">
+                  <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                  <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+                  <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+               </svg>
+            </button>
             <ul class="menu">
                <li class="menu-item"><a href="" class="menu-link">Главная</a></li>
                <li class="menu-item"><a href="" class="menu-link">Фильмы</a></li>
@@ -63,7 +72,8 @@
                </div>
             </div>
          </div>
-         <a href="#" class="film-trailer">
+         <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=z2X2HaTvkl8" href="#"
+            class="film-trailer">
             <img src="img/play.svg" alt="">
          </a>
       </div> <!-- /.film -->
@@ -113,8 +123,7 @@
       <!-- /.session -->
    </header>
    <div class="scheme container">
-      <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1029 600" fill="none"
-         xmlns="http://www.w3.org/2000/svg">
+      <svg class="scheme-svg" viewBox="0 0 1029 600" fill="none" xmlns="http://www.w3.org/2000/svg">
          <path class="light" d="M59 77L132.04 10H899.96L973 77H59Z" fill="url(#paint0_linear)" />
          <line x1="7" y1="5" x2="1025" y2="5" stroke="black" stroke-opacity="0.39" stroke-width="10" />
          <rect x="66.5" y="98" width="26" height="23" rx="5" />
@@ -626,6 +635,9 @@
       <a href="#" class="button button-pay">Перейти к оплате</a>
    </div>
    <!-- /.price -->
+   <script type="module">
+      import { Fancybox } from "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.esm.js";
+   </script>
 </body>
 
 </html>
